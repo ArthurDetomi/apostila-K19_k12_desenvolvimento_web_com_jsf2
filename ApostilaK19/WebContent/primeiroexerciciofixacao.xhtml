@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>K19 treinamentos</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:inputText value="#{numeroAleatorioBean.numeroMaximo}" />
+		<h:commandButton value="Gerar numero aleatorio" action="#{numeroAleatorioBean.gerarNumeroAleatorio}"
+		update="@form" />
+		<h:outputLabel value="Numero aleátorio: " />
+		
+		<h:outputText rendered="#{not empty numeroAleatorioBean.numeroAleatorio}" 
+					  value="#{numeroAleatorioBean.numeroAleatorio}" />
+					  
+		
+	</h:form>
+</h:body>
+
+
+</html>
