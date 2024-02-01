@@ -1,4 +1,4 @@
-package br.com.k19.apostila.exercicios.exercicio1;
+package br.com.k19.apostila.visaogeral.exercicio;
 
 import java.util.Random;
 

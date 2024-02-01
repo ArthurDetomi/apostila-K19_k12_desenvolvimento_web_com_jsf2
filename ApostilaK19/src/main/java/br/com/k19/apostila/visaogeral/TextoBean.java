@@ -1,4 +1,4 @@
-package br.com.k19.apostila;
+package br.com.k19.apostila.visaogeral;
 
 import javax.faces.bean.ManagedBean;
 
