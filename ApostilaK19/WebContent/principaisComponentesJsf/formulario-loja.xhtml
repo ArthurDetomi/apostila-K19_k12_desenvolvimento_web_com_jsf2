@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>K19 treinamentos</title>
+</h:head>
+
+<h:body>
+	
+	<h:form>
+		<h:outputLabel for="campo-nome" value="Nome: " />
+		<h:inputText id="campo-nome" value="#{consumidorBean.nome}" />
+		<br/>
+		<h:outputLabel for="campo-email" value="Email: " />
+		<h:inputText id="campo-email" type="email" value="#{consumidorBean.email}" />
+		<br/>
+		<h:outputLabel for="campo-telefone" value="Telefone: " />
+		<h:inputText id="campo-telefone" type="email" value="#{consumidorBean.telefone}" />
+		<br/>
+		
+		<h:outputLabel for="campo-sexo" value="Sexo: " />
+		<h:selectOneRadio id="campo-sexo" value="#{consumidorBean.sexo}" layout ="lineDirection">
+			<f:selectItems 
+				value="#{consumidorBean.sexos}"
+				var="sexo"
+				itemLabel="#{sexo.value}"
+				itemValue="#{sexo.key}"
+			/>
+		</h:selectOneRadio>
+		<h:outputLabel for="campo-numero-pedido" value="Numero Pedido: " />
+		<h:inputText id="campo-numero-pedido" value="#{consumidorBean.numeroPedido}" />
+		<br/>
+		<h:outputLabel for="campo-assunto" value="Assunto: " />
+		<h:inputText id="campo-assunto" value="#{consumidorBean.assunto}" />
+		<br/>
+		<h:outputLabel for="campo-comentario" value="Comentario :" />
+		<h:inputTextarea id="campo-comentario" value="#{consumidorBean.comentario}" />
+		
+		<br/>
+		<h:commandButton style="margin:20px" value="Cadastrar formulario" action="#{consumidorBean.gerarMensagem}"/>
+		
+	</h:form>
+	
+	Mensagem: #{consumidorBean.mensagem}
+	
+</h:body>
+
+
+</html>
